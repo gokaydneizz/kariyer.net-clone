@@ -79,17 +79,20 @@ export default {
             job.jobLocation.toLowerCase().includes(jobCityName)
           );
         });
+        return;
       }
 
       if (jobPositionLengthControl) {
         this.filteredJobs = this.jobs.filter((job) => {
           return job.jobTitle.toLowerCase().includes(jobPosition);
         });
+        return;
       }
       if (jobCityNameLengthControl) {
         this.filteredJobs = this.jobs.filter((job) => {
           return job.jobLocation.toLowerCase().includes(jobCityName);
         });
+        return;
       }
     },
   },
