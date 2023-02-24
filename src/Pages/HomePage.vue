@@ -50,7 +50,7 @@ export default {
   },
   methods: {
     fetchJobs() {
-      const url = "http://localhost:8080/data.json";
+      const url = "/data.json";
       axios
         .get(url)
         .then((response) => {
