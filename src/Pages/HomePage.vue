@@ -112,6 +112,7 @@ header {
   padding: 20px;
   margin: 0 auto;
   max-width: 1180px;
+  flex-wrap: wrap;
 }
 
 .input {
