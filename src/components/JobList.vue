@@ -51,14 +51,4 @@ main .jobs-div {
   max-width: 400px;
   margin: 0 auto;
 }
-
-.pagination {
-  display: flex !important;
-  gap: 10px !important;
-}
-
-.page-item {
-  background-color: blue;
-  border-radius: 10px;
-}
 </style>
