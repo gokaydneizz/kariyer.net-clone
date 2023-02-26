@@ -1,6 +1,7 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./routes";
+import JwPagination from "jw-vue-pagination";
 
 /* import the fontawesome core */
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -16,6 +17,8 @@ library.add(faSearch);
 
 /* add font awesome icon component */
 Vue.component("font-awesome-icon", FontAwesomeIcon);
+
+Vue.component("jw-pagination", JwPagination);
 
 Vue.config.productionTip = false;
 

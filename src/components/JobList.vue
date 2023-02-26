@@ -1,7 +1,14 @@
 <template>
   <main>
-    <div class="jobs-div" v-for="(item, index) in jobs" :key="index">
+    <div class="jobs-div" v-for="(item, index) in pageOfItems" :key="index">
       <SingleJob :data="item" />
+    </div>
+    <div class="pagination-div">
+      <jw-pagination
+        :pageSize="5"
+        :items="jobs"
+        @changePage="onChangePage"
+      ></jw-pagination>
     </div>
   </main>
 </template>
@@ -14,10 +21,20 @@ export default {
     SingleJob,
   },
   props: ["jobs"],
+  data() {
+    return {
+      pageOfItems: [],
+    };
+  },
+  methods: {
+    onChangePage(pageOfItems) {
+      this.pageOfItems = pageOfItems;
+    },
+  },
 };
 </script>
 
-<style scoped>
+<style>
 main {
   background-color: #f9f8f8;
   width: 100%;
@@ -28,5 +45,20 @@ main .jobs-div {
   max-width: 1180px;
   margin: 0 auto;
   padding: 20px;
+}
+
+.pagination-div {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.pagination {
+  display: flex !important;
+  gap: 10px !important;
+}
+
+.page-item {
+  background-color: blue;
+  border-radius: 10px;
 }
 </style>
